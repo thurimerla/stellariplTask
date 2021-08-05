@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.ml-3{
+  margin-left:50px;
+}
+
+.button-group-align-bottom{
+  margin-top: auto !important;
+  margin-bottom: 15px !important;
+}
+fieldset legend {
+  display: block;
+  margin-left: 20px;
+}
+legend.scheduler-border {
+  width:inherit; /* Or auto */
+  padding:0 10px; /* To give a bit of padding on the left and right */
+  border-bottom:none;
+}

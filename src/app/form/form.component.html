@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 align-self-center">
+      <!-- form fields code open -->
+      <form>
+        <div class="row">
+          <div class="col-8 col-md-8">
+            <fieldset>
+              <legend class="scheduler-border">{{formLabelData.title}}</legend>
+              <div class="mb-3">
+                <label for="name" class="form-label">{{formLabelData.label1}}</label>
+                <input type="text" placeholder="{{formLabelData.placeholder1}}" id="name" name="name"
+                  class="form-control" [(ngModel)]='form.name'>
+              </div>
+              <div class="mb-3">
+                <label for="designation" class="form-label">{{formLabelData.label2}}</label>
+                <input type="text" placeholder="{{formLabelData.placeholder2}}" id="designation" name="designation"
+                  class="form-control" [(ngModel)]='form.designation'>
+              </div>
+              <div class="mb-3">
+                <label for="experience" class="form-label">{{formLabelData.label3}}</label>
+                <input type="text" placeholder="{{formLabelData.placeholder3}}" id="experience" name="experience"
+                  class="form-control" [(ngModel)]='form.experience'>
+              </div>
+              <div class="mb-3">
+                <label for="hobbies" class="form-label">{{formLabelData.label4}}</label>
+                <input type="text" placeholder="{{formLabelData.placeholder4}}" id="hobbies" name="hobbies"
+                  class="form-control" [(ngModel)]='form.hobbies'>
+              </div>
+            </fieldset>
+          </div>
+          <div class="col-4 col-md-4 button-group-align-bottom">
+            <button type="button" class="btn btn-primary ml-3" data-bs-toggle="modal" data-bs-target="#confirmModal">
+              Submit
+            </button>
+            <button type="button" class="btn btn-danger ml-3" (click)="resetData()">Cancel</button>
+          </div>
+        </div>
+      </form>
+      <!-- form fields code close -->
+    </div>
+  </div>
+</div>
+
+<!-- Confirm Modal code open-->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        Confirm your data!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="saveData(form)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Confirm Modal code close-->
